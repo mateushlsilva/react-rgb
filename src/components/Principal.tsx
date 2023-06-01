@@ -9,18 +9,18 @@ function Principal() {
     }
     return (
         <ThemeProvider theme={color}>
-            <Fundo>
-                <Borda>
+            <FundoSld>
+                <BordaSld>
                     <Input titulo={'red'} contento={red} setContexto={setRed}/>
                     <Input titulo={'green'} contento={green} setContexto={setGreen}/>
                     <Input titulo={'blue'} contento={blue} setContexto={setBlue}/>
-                </Borda>
-            </Fundo>
+                </BordaSld>
+            </FundoSld>
       </ThemeProvider>
     )
 }
 
-const Fundo = styled.div`
+const FundoSld = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,7 +30,7 @@ const Fundo = styled.div`
     background-color: rgb(54,54,54)
 `
 
-const Borda = styled.div`
+const BordaSld = styled.div`
     background-color: rgb(${props => props.theme.cor});
     padding: 100px;
     border-radius: 20px;
