@@ -1,6 +1,10 @@
 function App() {
   return (
-    <div>Prova</div>
+    <div>
+      <input type="text" />
+      <input type="text" />
+      <input type="text" />
+    </div>
   );
 }
 
