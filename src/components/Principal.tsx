@@ -27,6 +27,7 @@ const Fundo = styled.div`
     justify-content: center;
     height: 100vh;
     width: 100vw;
+    background-color: rgb(54,54,54)
 `
 
 const Borda = styled.div`
