@@ -7,9 +7,9 @@ function Principal() {
 
   return (
     <div>
-      <Input contento={red} setContexto={setRed}/>
-      <Input contento={green} setContexto={setGreen}/>
-      <Input contento={blue} setContexto={setBlue}/>
+      <Input titulo={'red'} contento={red} setContexto={setRed}/>
+      <Input titulo={'green'} contento={green} setContexto={setGreen}/>
+      <Input titulo={'blue'} contento={blue} setContexto={setBlue}/>
     </div>
   );
 }
