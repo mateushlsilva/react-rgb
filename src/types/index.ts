@@ -1,12 +1,9 @@
 export interface RGBProps {
-    red: Props;
-    green: Props;
-    blue: Props;
+    red: string;
+    green: string;
+    blue: string;
     setRed: Function;
     setGreen: Function;
     setBlue: Function;
 }
 
-export interface Props{
-    color: string;
-}

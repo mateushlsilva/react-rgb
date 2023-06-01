@@ -1,21 +1,23 @@
 import { createContext, useEffect, useState } from "react";
-import { RGBProps, Props } from '../types'
+import { RGBProps } from '../types'
 
 
 
 export const Contexto = createContext({} as RGBProps);
 
 export function Provider({ children }: any) {
-    const [red, setRed] = useState({} as Props)
-    const [green, setGreen] = useState({} as Props)
-    const [blue, setBlue] = useState({} as Props)
+    const [red, setRed] = useState('' as string)
+    const [green, setGreen] = useState('' as string)
+    const [blue, setBlue] = useState('' as string)
 
     useEffect(() => {
-        setRed({color:'100'})
-        setGreen({color:'100'})
-        setBlue({color:'100'})
+        (async function() {
+            setRed('100')
+            setGreen('100')
+            setBlue('100')
+        })()
     }, [])
-
+    
     return (
         <Contexto.Provider value={{ red, green, blue, setRed, setGreen, setBlue }} >
             <span>{children}</span>
