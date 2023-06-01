@@ -1,17 +1,15 @@
+import Input from "./components/Input";
 import { Provider } from "./context";
 import { useContexto } from "./hooks";
 
-function Input() {
+function Principal() {
   const { red, green, blue, setRed, setGreen, setBlue} = useContexto()
 
-  function hand(event:any){
-
-  }
   return (
     <div>
-      <input type="text" value={red} onChange={(e) => setRed(e.target.value)} />
-      <input type="text" value={green}  onChange={(e) => setGreen(e.target.value)}/>
-      <input type="text" value={blue}  onChange={(e) => setBlue(e.target.value)}/>
+      <Input contento={red} setContexto={setRed}/>
+      <Input contento={green} setContexto={setGreen}/>
+      <Input contento={blue} setContexto={setBlue}/>
     </div>
   );
 }
@@ -19,7 +17,7 @@ function Input() {
 function App(){
   return(
     <Provider>
-      <Input/>
+      <Principal/>
     </Provider>
   )
 } 
